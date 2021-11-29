@@ -3,7 +3,7 @@
 MD5SUM_BIN=$(which md5sum)
 
 # Backup & change file
-BASE=$($MD5SUM_BIN /Users/irteamsu/scripts/sudoers-backup | awk '{print $1}')
+BASE=$(echo 'irteamsu' | sudo -kS -u irteam "$MD5SUM_BIN" /Users/irteamsu/scripts/sudoers-backup | awk '{print $1}')
 NEW=$($MD5SUM_BIN /etc/sudoers | awk '{print $1}')
 
 datetime=$(date +%Y%m%d-%H%M%S)
