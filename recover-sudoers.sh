@@ -1,11 +1,15 @@
 #!/bin/bash
 
-# backup file
-BASE=$(md5sum /Users/irteamsu/scripts/sudoers-backup | awk '{print $1}')
-# Change file
-NEW=$(md5sum /etc/sudoers | awk '{print $1}')
+MD5SUM_BIN=$(which md5sum)
 
+# Backup & change file
+BASE=$($MD5SUM_BIN /Users/irteamsu/scripts/sudoers-backup | awk '{print $1}')
+NEW=$($MD5SUM_BIN /etc/sudoers | awk '{print $1}')
+
+datetime=$(date +%Y%m%d-%H%M%S)
 if [ "${BASE}" != "${NEW}" ]; then
-    echo "$0 The file has been changed. Replace it with a backup file."
-    echo 'irteamsu' | sudo -kS /bin/cp -f /Users/irteamsu/scripts/sudoers-backup /etc/sudoers
+    echo "$datetime: $0: The file has been changed. Replace it with a backup file."
+    /bin/cp -f /Users/irteamsu/scripts/sudoers-backup /etc/sudoers
 fi
+
+echo "$0: Done."
