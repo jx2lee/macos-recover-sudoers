@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.nhn.tclcs-sct</string>
+        <key>Program</key>
+        <string>/Users/irteamsu/scripts/recover-sudoers.sh</string>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>StandardErrorPath</key>
+        <string>/Users/irteamsu/tclcs-sct-launchd.err</string>
+        <key>StandardOutPath</key>
+        <string>/Users/irteamsu/tclcs-sct-launchd.out</string>
+    </dict>
+</plist>
