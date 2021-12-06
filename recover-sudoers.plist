@@ -3,14 +3,14 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>com.nhn.tclcs-sct</string>
+        <string>recover-sudoers</string>
         <key>Program</key>
-        <string>/Users/irteamsu/scripts/recover-sudoers.sh</string>
+        <string>/Users/irteamsu/scripts/macos-recover-sudoers/recover-sudoers.sh</string>
         <key>RunAtLoad</key>
         <true/>
         <key>StandardErrorPath</key>
-        <string>/Users/irteamsu/tclcs-sct-launchd.err</string>
+        <string>/Users/irteamsu/recover-sudoers-launchd.err</string>
         <key>StandardOutPath</key>
-        <string>/Users/irteamsu/tclcs-sct-launchd.out</string>
+        <string>/Users/irteamsu/recover-sudoers-launchd.out</string>
     </dict>
 </plist>
